@@ -79,7 +79,7 @@ const App = () => {
     <div className="flex-1 text-center max-w-sm">
       <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Dine with Confidence</h2>
       <p className="text-lg text-gray-700">
-      Don't let the burden of research keep you from trying new places. Dine without doubts! Spend more time enjoying your meals and less time stressing about them. 
+      Dont let the burden of research keep you from trying new places. Dine without doubts! Spend more time enjoying your meals and less time stressing about them. 
       </p>
     </div>
     {/* Right Side: Image Container */}
