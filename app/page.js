@@ -42,17 +42,15 @@ const App = () => {
   {/* Hero section */}
 <section
   className="relative min-h-screen flex items-center justify-center px-6 bg-cover bg-center"
-  style={{ backgroundImage: `url(${testimage.src})` }}
->
-  {/* Optional dark overlay */}
-  <div className="absolute inset-0 bg-black/40"></div>
+//  style={{ backgroundImage: `url(${testimage.src})` }}
+>{/* Optional dark overlay dcn absolute inset-0 bg-black/40 */}
 
   {/* Content */}
   <div className="relative z-10 container mx-auto text-center">
-    <h1 className="lg:text-6xl max-w-3xl mx-auto font-bold text-white mb-4 leading-tight">
+    <h1 className="lg:text-6xl max-w-4xl mx-auto font-bold text-gray-800 mb-4 leading-tight">
       Celiac dining made simple
     </h1>
-    <p className="sm:text-xl text-gray-100 mb-7 max-w-3xl mx-auto leading-relaxed">
+    <p className="sm:text-xl text-gray-700 mb-7 max-w-3xl mx-auto leading-relaxed">
       An AI platform to enhance restaurant experiences for those with Celiac.
     </p>
 
@@ -209,7 +207,7 @@ const App = () => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Search & Discover</h3>
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-10">Search & Discover</h3>
                   <p className="text-gray-600 leading-relaxed text-lg">
                     Enter your location and dietary preferences. Our AI instantly scans thousands of restaurants to find the safest options for you.
                   </p>
@@ -238,7 +236,7 @@ const App = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-semibold text-gray-800 mb-4">Dine with Confidence</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">
+                  <p className="text-gray-600 leading-relaxed text-lg mb-15">
                     Make reservations directly through our platform, communicate your needs clearly to restaurants, and enjoy worry-free dining experiences.
                   </p>
                 </div>
@@ -251,7 +249,7 @@ const App = () => {
 
 
       {/* CTA section - Translucent */}
-      <section id="contact" className="py-20 mb-10 px-6">
+      <section id="contact" className="py-20 mb-10 mt-20 px-6">
         <div className="container mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
               Ready to Dine Safely?
