@@ -8,6 +8,7 @@ import Sunny from './Images/sunny-patio.png';
 import aihelper from './Images/ai-helper.png';
 import ReadReview from './Images/read-reviews.png';
 import Beachimage from './Images/beach-image.png';
+import sdbg from './Images/sd-background.png';
 
 const App = memo(() => {
   return (
@@ -46,15 +47,18 @@ const App = memo(() => {
     </div>
   </section>
 
+
 {/* How it works Section - Translucent Container */}
 <section className="py-20 px-6">
-  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto">
-    <h2 className="text-4xl font-bold text-gray-800 text-center mt-5 mb-20 max-w-5xl mx-auto">
-      PureTable combines advanced AI technology with user reviews to help you decide the safest options for you and others, without the endless research.
-    </h2>
-    
-    {/* 4 Images Grid with Text Overlays */}
-    <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-12 mb-5">
+  <div className="bg-white rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto">
+  <h2 className="text-8xl font-bold text-gray-800 text-center mb-3 max-w-5xl mx-auto">
+          Less stress. More restaurants.
+        </h2>
+        <p className="text-gray-700 text-center max-w-2xl mb-10 mx-auto">
+          PureTable combines advanced AI technology with user reviews to help you decide the safest options for you and others, without the endless research.
+        </p>
+    {/* Images Grid with Text Overlays */}
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {/* Image 1: Find Restaurant */}
       <div className="relative group">
         <Image 
@@ -118,15 +122,11 @@ const App = memo(() => {
 </section>
 
   {/* Why PureTable Section */}
-  <div className="container py-6 px-6 mb-10 bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto">
+  <div className="container py-6 px-6 mb-10 bg-white rounded-3xl p-8 sm:p-16 border border-white/30 shadow-4xl max-w-7xl mx-auto">
     <div className="space-y-12">
-      <h2 className="text-6xl sm:text-8xl font-bold text-gray-800 text-center mt-10 mb-8">
-        Why PureTable?
-      </h2>
-
       {/* Dine with Confidence Section */}
   <section className=" px-6">
-  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
+  <div className="bg-white rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
     {/* Left Side: Text Content */}
     <div className="flex-1 text-center max-w-sm">
       <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Dine with Confidence</h2>
@@ -143,7 +143,7 @@ const App = memo(() => {
 
 {/* Explore New Places Section */}
   <section className=" px-6">
-  <div className="bg-gradient-to-l from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
+  <div className="bg-white rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
     
     {/* Image Container (now on the left) */}
     <div className="flex-1 flex justify-end">
@@ -162,7 +162,7 @@ const App = memo(() => {
 
 {/* Build Community Section */}
 <section className=" px-6">
-  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
+  <div className="bg-white rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
     {/* Left Side: Text Content */}
     <div className="flex-1 text-center max-w-sm">
       <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Build Community</h2>
@@ -185,9 +185,12 @@ const App = memo(() => {
 {/* How it works Section - Further Explained */}
 <section className="py-10 px-6">
         <div className="container mx-auto">
-            <div className="bg-gradient-to-b from-[#ffffff] via-[#e6ede3] to-[#e3f6e651] rounded-3xl p-8 sm:p-12 border border-white/50 shadow-2xl max-w-5xl mx-auto">
+            <div className="bg-white rounded-3xl p-8 sm:p-12 border border-white/50 shadow-2xl max-w-5xl mx-auto">
             <div className="space-y-12">
-              <h2 className="text-5xl font-bold text-gray-800 text-center mb-10">How it works</h2>
+            <h2 className="text-8xl font-bold text-gray-800 text-center mt-5 mb-5 max-w-5xl mx-auto">
+              How it works
+
+        </h2>
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 bg-gradient-to-r from-[#177a3d47] to-green-200 rounded-full flex items-center justify-center">
