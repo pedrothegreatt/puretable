@@ -192,7 +192,7 @@ const App = memo(() => {
         <div className="container mx-auto">
             <div className="bg-white rounded-3xl p-8 sm:p-12 border border-white/50 shadow-2xl max-w-5xl mx-auto">
             <div className="space-y-12">
-             <h2 className="text-3xl sm:text-5xl lg:text-8xl font-bold text-gray-800 text-center mt-5 mb-15 max-w-5xl mx-auto">
+             <h2 className="text-3xl sm:text-5xl lg:text-8xl font-bold text-gray-800 text-center mt-5 mb-16 max-w-5xl mx-auto">
                How it works
          </h2>
               <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
