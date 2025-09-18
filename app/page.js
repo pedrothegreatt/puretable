@@ -1,32 +1,23 @@
 "use client";
 
-import Hero from './Components/Hero';
 import Image from 'next/image';
+import { memo } from 'react';
 import FindRest from './Images/find-rest.png';
 import NightOut from './Images/Night-out.png';
 import Sunny from './Images/sunny-patio.png';
 import aihelper from './Images/ai-helper.png';
 import ReadReview from './Images/read-reviews.png';
-import Mealimage from './Images/meal-image.png';
-import Cafeimage from './Images/cafe-image.png';
 import Beachimage from './Images/beach-image.png';
-import testimage from './Images/test.png';
 
-const App = () => {
+const App = memo(() => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-green-50 to-green-100">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        body {
-          font-family: 'Poppins', sans-serif;
-        }
-      `}</style>
+    <div className="min-h-screen bg-gradient-to-b from-white via-green-50 to-green-100 font-['Poppins',sans-serif]">
 
 
       {/* Header section */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-3xl border-b border-white/20">
+      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-white/20">
         <nav className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <a href="#" className="text-2xl sm:text-3xl font-bold text-gray-800 flex items-center group">
+          <a href="#" className="text-2xl sm:text-3xl font-bold text-gray-800">
             puretable
           </a>
           <div className="hidden md:flex space-x-8">
@@ -40,31 +31,25 @@ const App = () => {
    
 
   {/* Hero section */}
-<section
-  className="relative min-h-screen flex items-center justify-center px-6 bg-cover bg-center"
-//  style={{ backgroundImage: `url(${testimage.src})` }}
->{/* Optional dark overlay dcn absolute inset-0 bg-black/40 */}
+  <section className="relative min-h-screen flex items-center justify-center px-6">
+    <div className="relative z-10 container mx-auto text-center">
+      <h1 className="lg:text-6xl max-w-4xl mx-auto font-bold text-gray-800 mb-4 leading-tight">
+        Celiac dining made simple
+      </h1>
+      <p className="sm:text-xl text-gray-700 mb-7 max-w-3xl mx-auto leading-relaxed">
+        An AI platform to enhance restaurant experiences for those with Celiac.
+      </p>
 
-  {/* Content */}
-  <div className="relative z-10 container mx-auto text-center">
-    <h1 className="lg:text-6xl max-w-4xl mx-auto font-bold text-gray-800 mb-4 leading-tight">
-      Celiac dining made simple
-    </h1>
-    <p className="sm:text-xl text-gray-700 mb-7 max-w-3xl mx-auto leading-relaxed">
-      An AI platform to enhance restaurant experiences for those with Celiac.
-    </p>
-
-    {/* Get Started Button */}
-    <button className="px-8 sm:px-12 py-4 sm:py-3 mb-12 text-lg sm:text-xl font-semibold text-white bg-gradient-to-r from-[#177a3dc1] to-[#1a3052] bg-opacity-80 rounded-full shadow-xl transition-all duration-300 hover:bg-green-700 hover:shadow-2xl transform hover:scale-105 active:scale-95">
-      Get Started Today
-    </button>
-  </div>
-</section>
+      <button className="px-8 sm:px-12 py-4 sm:py-3 mb-12 text-lg sm:text-xl font-semibold text-white bg-gradient-to-r from-[#177a3dc1] to-[#1a3052] rounded-full shadow-xl transition-all duration-300 hover:bg-green-700 hover:shadow-2xl transform hover:scale-105 active:scale-95">
+        Get Started Today
+      </button>
+    </div>
+  </section>
 
 
 
   {/* Why PureTable Section */}
-  <div className="container py-6 px-6 mb-10 bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] backdrop-blur-xxl rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto flex items-center gap-8">
+  <div className="container py-6 px-6 mb-10 bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto">
     <div className="space-y-12">
       <h2 className="text-6xl sm:text-8xl font-bold text-gray-800 text-center mt-10 mb-8">
         Why PureTable?
@@ -72,28 +57,28 @@ const App = () => {
 
       {/* Dine with Confidence Section */}
   <section className=" px-6">
-  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] backdrop-blur-xxl rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
+  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
     {/* Left Side: Text Content */}
     <div className="flex-1 text-center max-w-sm">
       <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Dine with Confidence</h2>
       <p className="text-lg text-gray-700">
-      Dont let the burden of research keep you from trying new places. Dine without doubts! Spend more time enjoying your meals and less time stressing about them. 
+        Don&apos;t let the burden of research keep you from trying new places. Dine without doubts! Spend more time enjoying your meals and less time stressing about them.
       </p>
     </div>
     {/* Right Side: Image Container */}
     <div className="flex-1 flex justify-end">
-      <Image src={Sunny} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" />
+      <Image src={Sunny} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" priority />
     </div>
   </div>
   </section>
 
 {/* Explore New Places Section */}
   <section className=" px-6">
-  <div className="bg-gradient-to-l from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] backdrop-blur-xxl rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
+  <div className="bg-gradient-to-l from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
     
     {/* Image Container (now on the left) */}
-    <div className="flex-1 flex justify-right">
-      <Image src={Beachimage} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" />
+    <div className="flex-1 flex justify-end">
+      <Image src={Beachimage} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" loading="lazy" />
     </div>
 
     {/* Text Content (now on the right) */}
@@ -108,7 +93,7 @@ const App = () => {
 
 {/* Build Community Section */}
 <section className=" px-6">
-  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] backdrop-blur-xxl rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
+  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
     {/* Left Side: Text Content */}
     <div className="flex-1 text-center max-w-sm">
       <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Build Community</h2>
@@ -118,7 +103,7 @@ const App = () => {
     </div>
     {/* Right Side: Image Container */}
     <div className="flex-1 flex justify-end">
-      <Image src={NightOut} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" />
+      <Image src={NightOut} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" loading="lazy" />
     </div>
   </div>
   </section>
@@ -128,8 +113,8 @@ const App = () => {
 
   {/* How it works Section - Translucent Container */}
 <section className="py-20 px-6">
-  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] backdrop-blur-xxl rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto">
-    <h2 className="text-4xl font-bold text-gray-800 text-center mt-5 mb-20">
+  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto">
+    <h2 className="text-4xl font-bold text-gray-800 text-center mt-5 mb-20 max-w-5xl mx-auto">
       PureTable combines advanced AI technology with user reviews to help you decide the safest options for you and others, without the endless research.
     </h2>
     
@@ -141,9 +126,10 @@ const App = () => {
           src={FindRest} 
           alt="Find Gluten-Free Restaurants" 
           className="w-full h-120 object-cover rounded-2xl shadow-lg"
+          loading="lazy"
         />
         {/* Always visible overlay */}
-        <div className="absolute inset-0 flex flex-col items-left justify-top rounded-2xl p-4 transform hover: transition-transform duration-300">
+        <div className="absolute inset-0 flex flex-col items-left justify-start rounded-2xl p-4">
           <div className="relative">
             <div className="absolute inset-0 bg-[#3a422a11] backdrop-blur-md rounded-lg -m-2"></div>
             <div className="relative z-10">
@@ -159,9 +145,10 @@ const App = () => {
           src={ReadReview} 
           alt="Find Gluten-Free Restaurants" 
           className="w-full h-120 object-cover rounded-2xl shadow-lg"
+          loading="lazy"
         />
         {/* Always visible overlay */}
-        <div className="absolute inset-0 flex flex-col items-left justify-bottom rounded-2xl p-4">
+        <div className="absolute inset-0 flex flex-col items-left justify-start rounded-2xl p-4">
           <div className="relative">
             <div className="absolute inset-0 bg-[#3a422a11] backdrop-blur-md rounded-lg -m-2"></div>
             <div className="relative z-10">
@@ -177,9 +164,10 @@ const App = () => {
           src={aihelper} 
           alt="Find Gluten-Free Restaurants" 
           className="w-full h-120 object-cover rounded-2xl shadow-lg"
+          loading="lazy"
         />
         {/* Always visible overlay */}
-        <div className="absolute inset-0 flex flex-col items-left justify-top rounded-2xl p-4">
+        <div className="absolute inset-0 flex flex-col items-left justify-start rounded-2xl p-4">
           <div className="relative">
             <div className="absolute inset-0 bg-[#3a422a11] backdrop-blur-md rounded-lg -m-2"></div>
             <div className="relative z-10">
@@ -197,12 +185,12 @@ const App = () => {
 {/* How it works Section - Further Explained */}
 <section className="py-10 px-6">
         <div className="container mx-auto">
-          <div className="bg-gradient-to-b from-[#ffffff] via-[#e6ede3] to-[#e3f6e651] backdrop-blur-xxl rounded-3xl p-8 sm:p-12 border border-white/50 shadow-2xl max-w-5xl mx-auto">
+            <div className="bg-gradient-to-b from-[#ffffff] via-[#e6ede3] to-[#e3f6e651] rounded-3xl p-8 sm:p-12 border border-white/50 shadow-2xl max-w-5xl mx-auto">
             <div className="space-y-12">
               <h2 className="text-5xl font-bold text-gray-800 text-center mb-10">How it works</h2>
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-gradient-to-r from-[#177a3d47] to-green-200 bg-opacity-80 rounded-full flex items-center justify-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-[#177a3d47] to-green-200 rounded-full flex items-center justify-center">
                     <span className="text-2xl font-bold text-green-700">1</span>
                   </div>
                 </div>
@@ -216,7 +204,7 @@ const App = () => {
 
               <div className="flex flex-col md:flex-row-reverse items-center gap-8">
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-gradient-to-r from-[#177a3d47] to-green-200 bg-opacity-80 rounded-full flex items-center justify-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-[#177a3d47] to-green-200 rounded-full flex items-center justify-center">
                     <span className="text-2xl font-bold text-green-700">2</span>
                   </div>
                 </div>
@@ -230,7 +218,7 @@ const App = () => {
 
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-gradient-to-r from-[#177a3d47] to-green-200 bg-opacity-80 rounded-full flex items-center justify-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-[#177a3d47] to-green-200 rounded-full flex items-center justify-center">
                     <span className="text-2xl font-bold text-green-700">3</span>
                   </div>
                 </div>
@@ -249,7 +237,7 @@ const App = () => {
 
 
       {/* CTA section - Translucent */}
-      <section id="contact" className="py-20 mb-10 mt-20 px-6">
+      <section id="contact" className="py-20 mb-10 mt-10 px-6">
         <div className="container mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
               Ready to Dine Safely?
@@ -258,7 +246,7 @@ const App = () => {
               Join thousands of celiacs who trust PureTable for their dining adventures. Start exploring safe restaurants in your area today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#177a3db2] to-[#1a3052] bg-opacity-80 rounded-full shadow-xl transition-all duration-300 hover:bg-green-700 hover:shadow-2xl transform hover:scale-105">
+              <button className="px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#177a3db2] to-[#1a3052] rounded-full shadow-xl transition-all duration-300 hover:bg-green-700 hover:shadow-2xl transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 text-lg font-semibold text-green-700 bg-white/70 rounded-full shadow-lg transition-all duration-300 hover:bg-white hover:shadow-xl transform hover:scale-105">
@@ -269,7 +257,7 @@ const App = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 px-6 bg-white/20 backdrop-blur-sm">
+      <footer className="py-20 px-6 bg-white/20">
         <div className="container mx-auto text-center">
           <h3 className="text-2xl font-bold text-gray-800 mb-4">puretable</h3>
           <p className="text-gray-600 mb-8 max-w-md mx-auto">
@@ -288,9 +276,11 @@ const App = () => {
       </footer>
     </div>
   );
-}; 
+});
 
 
 
 
 export default App;
+
+App.displayName = 'App';
