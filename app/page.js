@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from 'react';
 
 import Image from 'next/image';
 import { memo } from 'react';
@@ -9,6 +10,7 @@ import aihelper from './Images/ai-helper.png';
 import ReadReview from './Images/read-reviews.png';
 import Beachimage from './Images/beach-image.png';
 import sdbg from './Images/sd-background.png';
+import Link from 'next/link';
 
 
 const App = memo(() => {
@@ -49,6 +51,9 @@ const App = memo(() => {
       <button className="px-8 sm:px-12 py-4 sm:py-3 mb-12 text-lg sm:text-xl font-semibold text-white bg-gradient-to-r from-[#177a3dc1] to-[#1a3052] rounded-full shadow-xl transition-all duration-300 hover:bg-green-700 hover:shadow-2xl transform hover:scale-105 active:scale-95">
         Get Started Today
       </button>
+      <Link href="/restaurants" className="px-8 sm:px-12 py-4 sm:py-3 mb-12 text-lg sm:text-xl font-semibold text-white bg-gradient-to-r from-[#177a3dc1] to-[#1a3052] rounded-full shadow-xl transition-all duration-300 hover:bg-green-700 hover:shadow-2xl transform hover:scale-105 active:scale-95">
+        View Restaurants
+      </Link>
     </div>
   </section>
 
