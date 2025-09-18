@@ -11,8 +11,8 @@ import Beachimage from './Images/beach-image.png';
 
 const App = memo(() => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-green-50 to-green-100 font-['Poppins',sans-serif]">
-
+    <div className="min-h-screen bg-white  font-['Poppins',sans-serif]">
+//bg-gradient-to-b from-white via-green-50 to-green-100
 
       {/* Header section */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-white/20">
@@ -46,72 +46,7 @@ const App = memo(() => {
     </div>
   </section>
 
-
-
-  {/* Why PureTable Section */}
-  <div className="container py-6 px-6 mb-10 bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto">
-    <div className="space-y-12">
-      <h2 className="text-6xl sm:text-8xl font-bold text-gray-800 text-center mt-10 mb-8">
-        Why PureTable?
-      </h2>
-
-      {/* Dine with Confidence Section */}
-  <section className=" px-6">
-  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
-    {/* Left Side: Text Content */}
-    <div className="flex-1 text-center max-w-sm">
-      <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Dine with Confidence</h2>
-      <p className="text-lg text-gray-700">
-        Don&apos;t let the burden of research keep you from trying new places. Dine without doubts! Spend more time enjoying your meals and less time stressing about them.
-      </p>
-    </div>
-    {/* Right Side: Image Container */}
-    <div className="flex-1 flex justify-end">
-      <Image src={Sunny} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" priority />
-    </div>
-  </div>
-  </section>
-
-{/* Explore New Places Section */}
-  <section className=" px-6">
-  <div className="bg-gradient-to-l from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
-    
-    {/* Image Container (now on the left) */}
-    <div className="flex-1 flex justify-end">
-      <Image src={Beachimage} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" loading="lazy" />
-    </div>
-
-    {/* Text Content (now on the right) */}
-    <div className="flex-1 text-center max-w-sm">
-      <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Explore New Places</h2>
-      <p className="text-lg text-gray-700">
-        Discover new places to eat and enjoy your meals without the worry of cross-contamination.
-      </p>
-    </div>
-  </div>
-</section>
-
-{/* Build Community Section */}
-<section className=" px-6">
-  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
-    {/* Left Side: Text Content */}
-    <div className="flex-1 text-center max-w-sm">
-      <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Build Community</h2>
-      <p className="text-lg text-gray-700">
-      Enjoy a community of people who understand your needs with insights to help you dine with confidence.
-      </p>
-    </div>
-    {/* Right Side: Image Container */}
-    <div className="flex-1 flex justify-end">
-      <Image src={NightOut} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" loading="lazy" />
-    </div>
-  </div>
-  </section>
-  </div>
-  </div>
-
-
-  {/* How it works Section - Translucent Container */}
+{/* How it works Section - Translucent Container */}
 <section className="py-20 px-6">
   <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto">
     <h2 className="text-4xl font-bold text-gray-800 text-center mt-5 mb-20 max-w-5xl mx-auto">
@@ -182,6 +117,71 @@ const App = memo(() => {
   </div>
 </section>
 
+  {/* Why PureTable Section */}
+  <div className="container py-6 px-6 mb-10 bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 border border-white/30 shadow-2xl max-w-7xl mx-auto">
+    <div className="space-y-12">
+      <h2 className="text-6xl sm:text-8xl font-bold text-gray-800 text-center mt-10 mb-8">
+        Why PureTable?
+      </h2>
+
+      {/* Dine with Confidence Section */}
+  <section className=" px-6">
+  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
+    {/* Left Side: Text Content */}
+    <div className="flex-1 text-center max-w-sm">
+      <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Dine with Confidence</h2>
+      <p className="text-lg text-gray-700">
+        Don&apos;t let the burden of research keep you from trying new places. Dine without doubts! Spend more time enjoying your meals and less time stressing about them.
+      </p>
+    </div>
+    {/* Right Side: Image Container */}
+    <div className="flex-1 flex justify-end">
+      <Image src={Sunny} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" priority />
+    </div>
+  </div>
+  </section>
+
+{/* Explore New Places Section */}
+  <section className=" px-6">
+  <div className="bg-gradient-to-l from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
+    
+    {/* Image Container (now on the left) */}
+    <div className="flex-1 flex justify-end">
+      <Image src={Beachimage} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" loading="lazy" />
+    </div>
+
+    {/* Text Content (now on the right) */}
+    <div className="flex-1 text-center max-w-sm">
+      <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Explore New Places</h2>
+      <p className="text-lg text-gray-700">
+        Discover new places to eat and enjoy your meals without the worry of cross-contamination.
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* Build Community Section */}
+<section className=" px-6">
+  <div className="bg-gradient-to-r from-[#ffffff] via-[#e6ede3] to-[#e2f4e0] rounded-3xl p-8 sm:p-16 max-w-7xl mx-auto flex items-center gap-8">
+    {/* Left Side: Text Content */}
+    <div className="flex-1 text-center max-w-sm">
+      <h2 className="text-3xl font-bold mb-4 text-[#1a202c]">Build Community</h2>
+      <p className="text-lg text-gray-700">
+      Enjoy a community of people who understand your needs with insights to help you dine with confidence.
+      </p>
+    </div>
+    {/* Right Side: Image Container */}
+    <div className="flex-1 flex justify-end">
+      <Image src={NightOut} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" loading="lazy" />
+    </div>
+  </div>
+  </section>
+  </div>
+  </div>
+
+
+  
+
 {/* How it works Section - Further Explained */}
 <section className="py-10 px-6">
         <div className="container mx-auto">
@@ -237,10 +237,10 @@ const App = memo(() => {
 
 
       {/* CTA section - Translucent */}
-      <section id="contact" className="py-20 mb-10 mt-10 px-6">
+      <section id="contact" className="py-20 mb-10 mt-22 px-6">
         <div className="container mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
-              Ready to Dine Safely?
+              Ready to dine safely?
             </h2>
             <p className="text-xl text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
               Join thousands of celiacs who trust PureTable for their dining adventures. Start exploring safe restaurants in your area today.
