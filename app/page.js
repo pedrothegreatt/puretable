@@ -148,19 +148,19 @@ const App = memo(() => {
 
 {/* Explore New Places Section */}
   <section className=" px-6">
-  <div className="bg-white rounded-3xl p-4 sm:p-8 lg:p-16 max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-8">
+  <div className="bg-white rounded-3xl p-4 sm:p-8 lg:p-16 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
     
-    {/* Image Container (now on the left) */}
-    <div className="flex-1 flex justify-center lg:justify-end">
-      <Image src={Beachimage} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" loading="lazy" />
-    </div>
-
-    {/* Text Content (now on the right) */}
+    {/* Text Content (now on the left) */}
     <div className="flex-1 text-center max-w-sm">
       <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#1a202c]">Explore New Places</h2>
       <p className="text-sm sm:text-base lg:text-lg text-gray-700">
         Discover new places to eat and enjoy your meals without the worry of cross-contamination.
       </p>
+    </div>
+
+    {/* Image Container (now on the right) */}
+    <div className="flex-1 flex justify-center lg:justify-end">
+      <Image src={Beachimage} alt="Gluten-Free" className="w-full max-w-4xl rounded-4xl shadow-lg" loading="lazy" />
     </div>
   </div>
 </section>
@@ -192,7 +192,7 @@ const App = memo(() => {
         <div className="container mx-auto">
             <div className="bg-white rounded-3xl p-8 sm:p-12 border border-white/50 shadow-2xl max-w-5xl mx-auto">
             <div className="space-y-12">
-             <h2 className="text-3xl sm:text-5xl lg:text-8xl font-bold text-gray-800 text-center mt-5 mb-5 max-w-5xl mx-auto">
+             <h2 className="text-3xl sm:text-5xl lg:text-8xl font-bold text-gray-800 text-center mt-5 mb-15 max-w-5xl mx-auto">
                How it works
          </h2>
               <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
