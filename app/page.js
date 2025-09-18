@@ -13,8 +13,6 @@ import sdbg from './Images/sd-background.png';
 const App = memo(() => {
   return (
     <div className="min-h-screen bg-white  font-['Poppins',sans-serif]">
-//bg-gradient-to-b from-white via-green-50 to-green-100
-
       {/* Header section */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-white/20">
         <nav className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
