@@ -10,9 +10,16 @@ import ReadReview from './Images/read-reviews.png';
 import Beachimage from './Images/beach-image.png';
 import sdbg from './Images/sd-background.png';
 
+
 const App = memo(() => {
   return (
-    <div className="min-h-screen bg-white  font-['Poppins',sans-serif]">
+    <div className="min-h-screen bg-white">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+          font-family: 'Poppins', sans-serif;
+        }
+      `}</style>
       {/* Header section */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-white/20">
         <nav className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
