@@ -107,7 +107,7 @@ const App = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-6 mt-18">
           <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800">
-            What's Hot?
+            What&apos;s Hot?
           </h1>
           <button className="hidden sm:inline-block px-4 py-2 bg-white text-gray-800 font-semibold rounded-full shadow-md hover:shadow-lg transition-shadow duration-300">
             Explore All
