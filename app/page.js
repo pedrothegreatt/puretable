@@ -25,7 +25,7 @@ const App = memo(() => {
       {/* Header section */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-white/20">
         <nav className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <a href="#" className="text-2xl sm:text-3xl font-bold text-gray-800">
+          <a href="/" className="text-2xl sm:text-3xl font-bold text-gray-800">
             puretable
           </a>
           <div className="hidden md:flex space-x-8">
@@ -47,12 +47,8 @@ const App = memo(() => {
       <p className="sm:text-xl text-gray-700 mb-7 max-w-3xl mx-auto leading-relaxed">
         An AI platform to enhance restaurant experiences for those with Celiac.
       </p>
-
-      <button className="px-8 sm:px-12 py-4 sm:py-3 mb-12 text-lg sm:text-xl font-semibold text-white bg-gradient-to-r from-[#177a3dc1] to-[#1a3052] rounded-full shadow-xl transition-all duration-300 hover:bg-green-700 hover:shadow-2xl transform hover:scale-105 active:scale-95">
-        Get Started Today
-      </button>
       <Link href="/restaurants" className="px-8 sm:px-12 py-4 sm:py-3 mb-12 text-lg sm:text-xl font-semibold text-white bg-gradient-to-r from-[#177a3dc1] to-[#1a3052] rounded-full shadow-xl transition-all duration-300 hover:bg-green-700 hover:shadow-2xl transform hover:scale-105 active:scale-95">
-        View Restaurants
+        Get Started
       </Link>
     </div>
   </section>

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useState } from 'react';
 
 // Reusable StarRating component to avoid code repetition
@@ -31,7 +31,7 @@ const MOCK_RESTAURANTS = [
     price_range: '$$$',
     yelp_rating: 4.5,
     app_user_rating: 4.8,
-    ai_insight: { grade: 9, confidence_score: 95, summary: 'Highly recommended for diverse, delicious, and gluten-free options.' }
+    ai_insight: { grade: 9, reason: 'Highly recommended for diverse and gluten-free options.' }
   },
   {
     restaurant_id: '2',
@@ -43,7 +43,7 @@ const MOCK_RESTAURANTS = [
     price_range: '$$$',
     yelp_rating: 4.6,
     app_user_rating: 3.2,
-    ai_insight: { grade: 7, confidence_score: 78, summary: 'A high-end Italian restaurant. Celiac-friendly options may be limited.' }
+    ai_insight: { grade: 7, reason: 'Limited celiac-friendly options.' }
   },
   {
     restaurant_id: '3',
@@ -55,7 +55,7 @@ const MOCK_RESTAURANTS = [
     price_range: '$$$',
     yelp_rating: 4.3,
     app_user_rating: 4.9,
-    ai_insight: { grade: 8, confidence_score: 91, summary: 'A classic French bistro with a surprisingly wide selection of gluten-free dishes.' }
+    ai_insight: { grade: 8, reason: 'Knowledgeable staff, classic French dishes.' }
   },
   {
     restaurant_id: '4',
@@ -67,7 +67,7 @@ const MOCK_RESTAURANTS = [
     price_range: '$$$',
     yelp_rating: 4.7,
     app_user_rating: 4.9,
-    ai_insight: { grade: 10, confidence_score: 98, summary: 'Exceptional gluten-free dining experience with high-quality ingredients and dedicated menu options.' }
+    ai_insight: { grade: 10, reason: 'Exceptional quality and a dedicated kitchen.' }
   }
 ];
 
@@ -90,8 +90,21 @@ const App = () => {
           font-family: 'Poppins', sans-serif;
         }
       `}</style>
+        {/* Header section */}
+        <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-white/20">
+        <nav className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+          <a href="/" className="text-2xl sm:text-3xl font-bold text-gray-800">
+            puretable
+          </a>
+          <div className="hidden md:flex space-x-8">
+            <a href="#features" className="text-gray-600 hover:text-gray-800 transition-colors">Features</a>
+            <a href="#about" className="text-gray-600 hover:text-gray-800 transition-colors">About</a>
+            <a href="#contact" className="text-gray-600 hover:text-gray-800 transition-colors">Contact</a>
+          </div>
+        </nav>
+      </header>
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-6 mt-18">
           <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800">
             What's Hot?
           </h1>
@@ -128,7 +141,7 @@ const App = () => {
                   <p className="text-gray-600 text-sm mb-2">{abbreviate(restaurant.cuisine, 15)} &bull; {restaurant.price_range} &bull; {restaurant.address.city}</p>
                   
                   {/* Rating Section */}
-                  <div className="flex flex-col gap-2">
+                  <div className="relative flex flex-col gap-2">
                     {/* Yelp Rating */}
                     <div className="flex items-center">
                       <StarRating rating={restaurant.yelp_rating} />
@@ -139,18 +152,15 @@ const App = () => {
                       <StarRating rating={restaurant.app_user_rating} color="text-blue-500" />
                       <span className="text-sm text-gray-500 ml-2">{restaurant.app_user_rating.toFixed(1)} User Rating</span>
                     </div>
+                     {/* AI Grade Badge */}
+                    <div className="absolute right-0 top-0 flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full border-2 border-blue-600 text-blue-600 font-bold text-lg">
+                      {restaurant.ai_insight.grade}
+                    </div>
                   </div>
 
                   {/* AI Insights Section */}
-                  <div className="mt-4 pt-4 border-t border-gray-200 relative">
-                    <div className="flex justify-between items-center mb-1">
-                      <p className="font-semibold text-gray-700">AI Insight:</p>
-                      <div className="bg-blue-600 text-white font-bold h-8 w-8 flex items-center justify-center rounded-full flex-shrink-0">
-                        {restaurant.ai_insight.grade}
-                      </div>
-                    </div>
-                    <p className="font-medium text-blue-500 mt-2">({restaurant.ai_insight.confidence_score}% Confidence)</p>
-                    <p className="text-gray-600 italic text-sm mt-1">{abbreviate(restaurant.ai_insight.summary, 60)}</p>
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <p className="text-gray-600">{restaurant.ai_insight.reason}</p>
                   </div>
                 </div>
               </div>
