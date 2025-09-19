@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 
 // Reusable StarRating component to avoid code repetition
 const StarRating = ({ rating, size = 16, color = 'text-yellow-400' }) => {
@@ -93,9 +94,9 @@ const App = () => {
         {/* Header section */}
         <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-white/20">
         <nav className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <a href="/" className="text-2xl sm:text-3xl font-bold text-gray-800">
+          <Link href="/" className="text-2xl sm:text-3xl font-bold text-gray-800">
             puretable
-          </a>
+          </Link>
           <div className="hidden md:flex space-x-8">
             <a href="#features" className="text-gray-600 hover:text-gray-800 transition-colors">Features</a>
             <a href="#about" className="text-gray-600 hover:text-gray-800 transition-colors">About</a>
